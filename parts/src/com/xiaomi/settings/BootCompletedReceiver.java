@@ -14,6 +14,7 @@ import android.util.Log;
 
 import com.xiaomi.settings.battery.ChargingLimitService;
 import com.xiaomi.settings.display.ColorModeService;
+import com.xiaomi.settings.thermal.ThermalUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
     private static final String TAG = "XiaomiParts";
@@ -39,6 +40,10 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         // Battery
         context.startServiceAsUser(new Intent(context, ChargingLimitService.class),
                 UserHandle.CURRENT);
+
+	// Thermal
+	ThermalUtils.startService(context);
+
     }
 
     private static void onBootCompleted(Context context) {
