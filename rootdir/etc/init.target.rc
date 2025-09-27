@@ -162,6 +162,12 @@ on charger
     chmod 0664 /sys/devices/system/cpu/cpufreq/policy7/scaling_min_freq
     chmod 0664 /sys/devices/system/cpu/cpufreq/policy7/scaling_max_freq
 
+# Allow system to manipulate KProfiles modes and parameters
+    chown system system /sys/module/kprofiles/parameters/auto_kprofiles
+    chmod 0660 /sys/module/kprofiles/parameters/auto_kp
+    chown system system /sys/kernel/kprofiles/kp_mode
+    chmod 0660 /sys/kernel/kprofiles/kp_mode
+
 #service vendor.lowi /vendor/bin/sscrpcd
 #   class core
 #   user system
