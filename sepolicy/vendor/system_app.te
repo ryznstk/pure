@@ -4,6 +4,9 @@ hal_client_domain(system_app, vendor_hal_displayfeature_xiaomi)
 # Charging Control
 allow system_app vendor_sysfs_battery_supply:file rw_file_perms;
 
+# Allow KProfiles to be adjusted by a system app
+allow system_app sysfs_kprofiles:file rw_file_perms;
+
 # Allow system_app to search the battery directory
 allow system_app vendor_sysfs_battery_supply:dir r_dir_perms;
 allow system_app vendor_sysfs_battery_supply:file r_file_perms;

@@ -19,3 +19,5 @@ type vendor_sysfs_msm_subsys, fs_type, sysfs_type;
 # Color
 type vendor_display_data_file, data_file_type, file_type;
 
+# KProfiles
+type sysfs_kprofiles, sysfs_type, fs_type;
