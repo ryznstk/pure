@@ -27,9 +27,35 @@ rm -rf packages/apps/GameBar
 git clone https://github.com/ryznstk/packages_apps_GameBar.git packages/apps/GameBar
 
 # LMO
+<<<<<<< HEAD
 echo "fetching LMOfreeroam tree..."
 cd packages/apps/LMOFreeform
 git fetch https://github.com/kenway214/packages_apps_LMOFreeform.git sixteen-qpr2
+=======
+echo "Cloning LMOfreeroam tree..."
+rm -rf packages/apps/LMOFreeform
+git clone https://github.com/ryznstk/packages_apps_LMOFreeforms.git packages/apps/LMOFreeform
+
+rm -rf packages/apps/DepthWallpaperHelper
+
+<<<<<<< HEAD
+=======
+
+rm -rf packages/apps/XiaomiParts
+
+# ViperFX
+rm -rf packages/apps/ViPER4AndroidFX
+git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX
+
+# KProfiles (fresh clone)
+echo "Cloning KProfiles..."
+rm -rf packages/apps/KProfiles
+git clone https://github.com/droidcore/packages_apps_KProfiles.git packages/apps/KProfiles
+
+>>>>>>> 6d00752 (v4a)
+cd system/sepolicy
+git fetch https://github.com/ryznstk/lunaris_system_sepolicy.git test
+>>>>>>> c03dace (v4a)
 git reset --hard FETCH_HEAD
 croot
 
