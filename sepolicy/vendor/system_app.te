@@ -1,0 +1,5 @@
+# Color
+hal_client_domain(system_app, vendor_hal_displayfeature_xiaomi)
+
+# Charging Control
+allow system_app vendor_sysfs_battery_supply:file rw_file_perms;
