@@ -23,6 +23,18 @@ $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk
 $(call soong_config_set,rfs,mpss_firmware_symlink_target,modem_firmware)
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
+
+# TouchServices
+$(call inherit-product, packages/apps/TouchServices/touchservice.mk)
+
+# GameBar Performance Overlay
+$(call inherit-product, packages/apps/GameBar/gamebar.mk) 
+
+# Lineage-Priv
+-include vendor/lineage-priv/keys/keys.mk
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
