@@ -1,0 +1,67 @@
+#!/bin/bash
+
+# Vendor (fresh clone)
+echo "Cloning vendor tree..."
+rm -rf vendor/xiaomi/peridot
+git clone https://github.com/ryznstk/andriod_vendor_xiaomi_peridot.git vendor/xiaomi/peridot
+
+# Kernel source (fresh clone)
+echo "Cloning kernel source tree..."
+rm -rf kernel/xiaomi/sm8635
+git clone -b bka --depth 1 https://github.com/Evolution-X-Devices/kernel_xiaomi_sm8635.git kernel/xiaomi/sm8635
+
+rm -rf kernel/xiaomi/sm8635-modules
+git clone -b bka --depth 1 https://github.com/Evolution-X-Devices/kernel_xiaomi_sm8635-modules.git kernel/xiaomi/sm8635-modules
+
+rm -rf kernel/xiaomi/sm8635-devicetrees
+git clone -b bka --depth 1 https://github.com/Evolution-X-Devices/kernel_xiaomi_sm8635-devicetrees.git kernel/xiaomi/sm8635-devicetrees
+
+# Hardware xiaomi (fresh clone)
+echo "Cloning hardware xiaomi source..."
+rm -rf hardware/xiaomi
+git clone -b lineage-23.2 https://github.com/ryznstk/hardware_xiaomi_los.git hardware/xiaomi
+
+rm -rf packages/apps/XiaomiDolby
+
+# Gamebar
+echo "Cloning Gamebar tree..."
+rm -rf packages/apps/GameBar
+git clone https://github.com/ryznstk/packages_apps_GameBar.git packages/apps/GameBar
+
+rm -rf packages/apps/XiaomiParts
+
+# LMO
+echo "fetching LMOfreeroam tree..."
+cd packages/apps/LMOFreeform
+git fetch https://github.com/kenway214/packages_apps_LMOFreeform.git sixteen-qpr2
+git reset --hard FETCH_HEAD
+croot
+
+git clone https://github.com/kenway214/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
+
+# KProfiles (fresh clone)
+echo "Cloning KProfiles..."
+rm -rf packages/apps/KProfiles
+git clone https://github.com/ryznstk/packages_apps_KProfiles.git packages/apps/KProfiles
+
+cd system/sepolicy
+git fetch https://github.com/ryznstk/lunaris_system_sepolicy.git test
+git reset --hard FETCH_HEAD
+croot
+
+# Refresh signing keys
+if [ -d vendor/lineage-priv/keys ]; then
+  echo "Removing existing signing keys..."
+  rm -rf vendor/lineage-priv/keys
+fi
+echo "Cloning fresh signing keys..."
+git clone https://github.com/droidcore/private_key.git -b main vendor/lineage-priv/keys
+
+# Always back to root at the end
+if command -v croot &>/dev/null; then
+  croot
+else
+  cd "$ANDROID_BUILD_TOP" || true
+fi
+
+echo "vendorsetup.sh execution complete."
