@@ -32,6 +32,7 @@ cd packages/apps/LMOFreeform
 git fetch https://github.com/kenway214/packages_apps_LMOFreeform.git sixteen-qpr2
 git reset --hard FETCH_HEAD
 croot
+
 rm -rf packages/apps/TouchServices
 git clone https://github.com/kenway214/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
 
