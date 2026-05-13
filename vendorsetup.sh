@@ -53,23 +53,63 @@ git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages
 rm -rf packages/apps/TouchServices
 git clone https://github.com/kenway214/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
 
-cd system/sepolicy
-git fetch https://github.com/ryznstk/lunaris_system_sepolicy.git test
+cd hardware/interfaces
+git fetch https://github.com/ryznstk/hardware_interfaces bq2
 git reset --hard FETCH_HEAD
 croot
 
-cd packages/apps/Settings
-git fetch https://github.com/ryznstk/packages_apps_Settings test
+rm -rf external/steam-audio
+git clone -b lineage-23.2 https://github.com/AxionAOSP/android_external_steam-audio.git external/steam-audio
+
+cd external/pffft
+git fetch https://github.com/AxionAOSP/android_external_pffft lineage-23.2
 git reset --hard FETCH_HEAD
 croot
+
+#cd system/sepolicy
+#git fetch https://github.com/ryznstk/system_sepolicy.git bq2
+#git reset --hard FETCH_HEAD
+#croot
+
+cd vendor/lineage
+git fetch https://github.com/ryznstk/vendor_evolution bq2
+git reset --hard FETCH_HEAD
+croot
+
+cd frameworks/av
+git fetch https://github.com/ryznstk/evo_frameworks_av bq2
+git reset --hard FETCH_HEAD
+croot
+
+cd system/media
+git fetch https://github.com/ryznstk/system_media bq2
+git reset --hard FETCH_HEAD
+croot
+
+#cd packages/apps/Evolver
+#git fetch https://github.com/ryznstk/packages_apps_Evolver.git bq2
+#git reset --hard FETCH_HEAD
+#croot
+
+cd device/qcom/sepolicy_vndr/sm8650
+git fetch https://github.com/LineageOS/android_device_qcom_sepolicy_vndr.git lineage-23.2-caf-sm8650
+git reset --hard FETCH_HEAD
+croot
+
+cd hardware/qcom-caf/common
+git fetch https://github.com/LineageOS/android_hardware_qcom-caf_common lineage-23.2
+git reset --hard FETCH_HEAD
+croot
+
+rm -rf vendor/lineage-priv
 
 # Refresh signing keys
-if [ -d vendor/lineage-priv/keys ]; then
+if [ -d vendor/evolution-priv/keys ]; then
   echo "Removing existing signing keys..."
-  rm -rf vendor/lineage-priv/keys
+  rm -rf vendor/evolution-priv/keys
 fi
 echo "Cloning fresh signing keys..."
-git clone https://github.com/droidcore/private_key.git -b main vendor/lineage-priv/keys
+git clone https://github.com/droidcore/private_key.git -b evo vendor/evolution-priv/keys
 
 # Always back to root at the end
 if command -v croot &>/dev/null; then
