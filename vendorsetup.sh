@@ -16,6 +16,11 @@ git clone -b lineage-23.2 --depth 1 https://github.com/LineageOS/android_kernel_
 rm -rf kernel/xiaomi/sm8635-devicetrees
 git clone -b lineage-23.2 --depth 1 https://github.com/LineageOS/android_kernel_xiaomi_sm8635-devicetrees.git kernel/xiaomi/sm8635-devicetrees
 
+cd kernel/xiaomi/sm8635
+git fetch https://github.com/ryznstk/kernel_xiaomi_sm8635 los
+git cherry-pick e91f7de56e57e23a9a11780b62ad7ab1b336b565
+croot
+
 # Hardware xiaomi (fresh clone)
 echo "Cloning hardware xiaomi source..."
 rm -rf hardware/xiaomi
@@ -52,56 +57,6 @@ git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages
 
 rm -rf packages/apps/TouchServices
 git clone https://github.com/kenway214/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
-
-cd hardware/interfaces
-git fetch https://github.com/ryznstk/hardware_interfaces bq2
-git reset --hard FETCH_HEAD
-croot
-
-rm -rf external/steam-audio
-git clone -b lineage-23.2 https://github.com/AxionAOSP/android_external_steam-audio.git external/steam-audio
-
-cd external/pffft
-git fetch https://github.com/AxionAOSP/android_external_pffft lineage-23.2
-git reset --hard FETCH_HEAD
-croot
-
-#cd system/sepolicy
-#git fetch https://github.com/ryznstk/system_sepolicy.git bq2
-#git reset --hard FETCH_HEAD
-#croot
-
-cd vendor/lineage
-git fetch https://github.com/ryznstk/vendor_evolution bq2
-git reset --hard FETCH_HEAD
-croot
-
-cd frameworks/av
-git fetch https://github.com/ryznstk/evo_frameworks_av bq2
-git reset --hard FETCH_HEAD
-croot
-
-cd system/media
-git fetch https://github.com/ryznstk/system_media bq2
-git reset --hard FETCH_HEAD
-croot
-
-#cd packages/apps/Evolver
-#git fetch https://github.com/ryznstk/packages_apps_Evolver.git bq2
-#git reset --hard FETCH_HEAD
-#croot
-
-cd device/qcom/sepolicy_vndr/sm8650
-git fetch https://github.com/LineageOS/android_device_qcom_sepolicy_vndr.git lineage-23.2-caf-sm8650
-git reset --hard FETCH_HEAD
-croot
-
-cd hardware/qcom-caf/common
-git fetch https://github.com/LineageOS/android_hardware_qcom-caf_common lineage-23.2
-git reset --hard FETCH_HEAD
-croot
-
-rm -rf vendor/lineage-priv
 
 # Refresh signing keys
 if [ -d vendor/evolution-priv/keys ]; then
