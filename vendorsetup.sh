@@ -3,7 +3,7 @@
 # Vendor (fresh clone)
 echo "Cloning vendor tree..."
 rm -rf vendor/xiaomi/peridot
-git clone https://gitlab.com/AdarshGrewal/proprietary_vendor_xiaomi_peridot.git vendor/xiaomi/peridot
+git clone https://gitlab.com/blu96/vendor-xiaomi-peridot-yt.git vendor/xiaomi/peridot
 
 # Kernel source (fresh clone)
 echo "Cloning kernel source tree..."
@@ -19,7 +19,17 @@ git clone -b lineage-23.2 --depth 1 https://github.com/LineageOS/android_kernel_
 # Hardware xiaomi (fresh clone)
 echo "Cloning hardware xiaomi source..."
 rm -rf hardware/xiaomi
-git clone -b lineage-23.2 https://github.com/LineageOS/android_hardware_xiaomi.git hardware/xiaomi
+git clone -b lineage-23.2 https://github.com/ryznstk/hardware_xiaomi_los.git hardware/xiaomi
+
+# MiuiCamera device tree (fresh clone)
+echo "Cloning MiuiCamera device tree..."
+rm -rf device/xiaomi/peridot-miuicamera
+git clone https://github.com/GuidixX/device_xiaomi_peridot-miuicamera.git device/xiaomi/peridot-miuicamera
+
+# MiuiCamera vendor tree (fresh clone)
+echo "Cloning MiuiCamera vendor tree..."
+rm -rf vendor/xiaomi/peridot-miuicamera
+git clone https://github.com/GuidixX/vendor_xiaomi_peridot-miuicamera.git vendor/xiaomi/peridot-miuicamera
 
 # Gamebar
 echo "Cloning Gamebar tree..."
@@ -27,19 +37,11 @@ rm -rf packages/apps/GameBar
 git clone https://github.com/ryznstk/packages_apps_GameBar.git packages/apps/GameBar
 
 # LMO
-<<<<<<< HEAD
 echo "fetching LMOfreeroam tree..."
 cd packages/apps/LMOFreeform
 git fetch https://github.com/kenway214/packages_apps_LMOFreeform.git sixteen-qpr2
-=======
-echo "Cloning LMOfreeroam tree..."
-rm -rf packages/apps/LMOFreeform
-git clone https://github.com/ryznstk/packages_apps_LMOFreeforms.git packages/apps/LMOFreeform
-
-rm -rf packages/apps/DepthWallpaperHelper
-
-<<<<<<< HEAD
-=======
+git reset --hard FETCH_HEAD
+croot
 
 rm -rf packages/apps/XiaomiParts
 
@@ -47,17 +49,6 @@ rm -rf packages/apps/XiaomiParts
 rm -rf packages/apps/ViPER4AndroidFX
 git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX
 
-# KProfiles (fresh clone)
-echo "Cloning KProfiles..."
-rm -rf packages/apps/KProfiles
-git clone https://github.com/droidcore/packages_apps_KProfiles.git packages/apps/KProfiles
-
->>>>>>> 6d00752 (v4a)
-cd system/sepolicy
-git fetch https://github.com/ryznstk/lunaris_system_sepolicy.git test
->>>>>>> c03dace (v4a)
-git reset --hard FETCH_HEAD
-croot
 
 rm -rf packages/apps/TouchServices
 git clone https://github.com/kenway214/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
