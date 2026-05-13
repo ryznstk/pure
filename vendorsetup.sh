@@ -8,18 +8,13 @@ git clone https://gitlab.com/blu96/vendor-xiaomi-peridot-yt.git vendor/xiaomi/pe
 # Kernel source (fresh clone)
 echo "Cloning kernel source tree..."
 rm -rf kernel/xiaomi/sm8635
-git clone -b lineage-23.2 --depth 1 https://github.com/LineageOS/android_kernel_xiaomi_sm8635.git kernel/xiaomi/sm8635
+git clone -b los --depth 1 https://github.com/ryznstk/kernel_xiaomi_sm8635.git kernel/xiaomi/sm8635
 
 rm -rf kernel/xiaomi/sm8635-modules
 git clone -b lineage-23.2 --depth 1 https://github.com/LineageOS/android_kernel_xiaomi_sm8635-modules.git kernel/xiaomi/sm8635-modules
 
 rm -rf kernel/xiaomi/sm8635-devicetrees
 git clone -b lineage-23.2 --depth 1 https://github.com/LineageOS/android_kernel_xiaomi_sm8635-devicetrees.git kernel/xiaomi/sm8635-devicetrees
-
-cd kernel/xiaomi/sm8635
-git fetch https://github.com/ryznstk/kernel_xiaomi_sm8635 los
-git cherry-pick e91f7de56e57e23a9a11780b62ad7ab1b336b565
-croot
 
 # Hardware xiaomi (fresh clone)
 echo "Cloning hardware xiaomi source..."
