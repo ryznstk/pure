@@ -31,9 +31,6 @@ echo "Cloning MiuiCamera vendor tree..."
 rm -rf vendor/xiaomi/peridot-miuicamera
 git clone https://github.com/GuidixX/vendor_xiaomi_peridot-miuicamera.git vendor/xiaomi/peridot-miuicamera
 
-rm -rf packages/apps/AxionFx
-rm -rf external/steam-audio
-
 # Gamebar
 echo "Cloning Gamebar tree..."
 rm -rf packages/apps/GameBar
@@ -61,13 +58,15 @@ git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages
 rm -rf packages/apps/TouchServices
 git clone https://github.com/kenway214/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
 
+rm -rf vendor/evolution-priv
+
 # Refresh signing keys
-if [ -d vendor/evolution-priv/keys ]; then
+if [ -d vendor/lineage-priv/keys ]; then
   echo "Removing existing signing keys..."
-  rm -rf vendor/evolution-priv/keys
+  rm -rf vendor/lineage-priv/keys
 fi
 echo "Cloning fresh signing keys..."
-git clone https://github.com/droidcore/private_key.git -b evo vendor/evolution-priv/keys
+git clone https://github.com/droidcore/private_key.git -b main vendor/lineage-priv/keys
 
 # Always back to root at the end
 if command -v croot &>/dev/null; then
