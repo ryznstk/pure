@@ -31,6 +31,9 @@ echo "Cloning MiuiCamera vendor tree..."
 rm -rf vendor/xiaomi/peridot-miuicamera
 git clone https://github.com/GuidixX/vendor_xiaomi_peridot-miuicamera.git vendor/xiaomi/peridot-miuicamera
 
+rm -rf packages/apps/AxionFx
+rm -rf external/steam-audio
+
 # Gamebar
 echo "Cloning Gamebar tree..."
 rm -rf packages/apps/GameBar
