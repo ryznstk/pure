@@ -50,6 +50,11 @@ git clone https://github.com/ryznstk/packages_apps_KProfiles.git packages/apps/K
 
 rm -rf packages/apps/XiaomiParts
 
+cd system/sepolicy
+git fetch https://github.com/ryznstk/lunaris_system_sepolicy.git test
+git reset --hard FETCH_HEAD
+croot
+
 # ViperFX
 rm -rf packages/apps/ViPER4AndroidFX
 git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX
