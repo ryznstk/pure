@@ -32,3 +32,5 @@ bluetooth.profile.vcp.controller.enabled=false
 
 # Media
 media.stagefright.audio.deep=true
+
+ro.lunaris.maintainer=BLU
