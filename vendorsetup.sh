@@ -50,6 +50,11 @@ git clone https://github.com/ryznstk/packages_apps_KProfiles.git packages/apps/K
 
 rm -rf packages/apps/XiaomiParts
 
+cd packages/apps/Settings
+git fetch https://github.com/ryznstk/packages_apps_Settings test
+git reset --hard FETCH_HEAD
+croot
+
 cd system/sepolicy
 git fetch https://github.com/ryznstk/lunaris_system_sepolicy.git test
 git reset --hard FETCH_HEAD
