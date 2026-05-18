@@ -41,6 +41,8 @@ $(call inherit-product-if-exists, device/xiaomi/peridot-miuicamera/device.mk)
 # Viper4AndroidFX
 $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
+PRODUCT_ENABLE_UFFD_GC := true
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
