@@ -18,6 +18,8 @@ on early-init
     export ADSP_LIBRARY_PATH /odm/lib/rfsa/adsp;/vendor/lib/rfsa/adsp/;/system/lib/rfsa/adsp;/system/vendor/lib/rfsa/adsp;/dsp
     # set tcp_mtu_probing to 1
     write /proc/sys/net/ipv4/tcp_mtu_probing 1
+    # Wi-Fi Bonding: increase max TCP reordering for bonding/packet balancing
+    write /proc/sys/net/ipv4/tcp_max_reordering 1000
 
     chown system graphics /sys/class/drm/card0/device/power/control
 
@@ -307,6 +309,14 @@ on property:sys.boot_completed=1
     write /dev/cpuctl/camera-daemon/cpu.uclamp.max max
     write /dev/cpuctl/camera-daemon/cpu.uclamp.min 50
     write /dev/cpuctl/camera-daemon/cpu.uclamp.latency_sensitive 1
+
+    # Wi-Fi NoLog: stop dump/diag services
+    stop tcpdump
+    stop cnss_diag
+
+    # Wi-Fi NoLog: clear wlan logs
+    rm /data/vendor/wlan_logs
+    mkdir /data/vendor/wlan_logs 0000 root root
 
 service qrtr-lookup /vendor/bin/qrtr-lookup
     class core
