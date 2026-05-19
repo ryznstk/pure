@@ -44,9 +44,9 @@ git reset --hard FETCH_HEAD
 croot
 
 # KProfiles (fresh clone)
-echo "Cloning KProfiles..."
-rm -rf packages/apps/KProfiles
-git clone https://github.com/ryznstk/packages_apps_KProfiles.git packages/apps/KProfiles
+#echo "Cloning KProfiles..."
+#rm -rf packages/apps/KProfiles
+#git clone https://github.com/ryznstk/packages_apps_KProfiles.git packages/apps/KProfiles
 
 rm -rf packages/apps/XiaomiParts
 
