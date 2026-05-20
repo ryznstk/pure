@@ -29,6 +29,8 @@ $(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
 # TouchServices
 $(call inherit-product, packages/apps/TouchServices/touchservice.mk)
 
+$(call inherit-product, packages/apps/AxionFx/config.mk)
+
 # GameBar Performance Overlay
 $(call inherit-product, packages/apps/GameBar/gamebar.mk) 
 
@@ -376,7 +378,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom-caf/common/libqti-perfd-client \
     hardware/xiaomi \
     vendor/qcom/opensource/usb/etc \
-    hardware/lineage/compat
+    hardware/lineage/compat \
+    packages/apps/AxionFx
 
 # Sensors
 PRODUCT_PACKAGES += \
