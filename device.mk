@@ -385,7 +385,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom-caf/common/libqti-perfd-client \
     hardware/xiaomi \
     vendor/qcom/opensource/usb/etc \
-    hardware/lineage/compat
+    hardware/lineage/compat \
+    packages/apps/AxionFx
 
 # Sensors
 PRODUCT_PACKAGES += \
