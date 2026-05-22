@@ -8,7 +8,7 @@ git clone -b los https://gitlab.com/blu96/vendor-xiaomi-peridot-yt.git vendor/xi
 # Kernel source (fresh clone)
 echo "Cloning kernel source tree..."
 rm -rf kernel/xiaomi/sm8635
-git clone -b test4 --depth 1 https://github.com/ryznstk/kernel_xiaomi_sm8635.git kernel/xiaomi/sm8635
+git clone -b lineage-23.2 --depth 1 https://github.com/ryznstk/kernel_xiaomi_sm8635.git kernel/xiaomi/sm8635
 
 rm -rf kernel/xiaomi/sm8635-modules
 git clone -b lineage-23.2 --depth 1 https://github.com/ryznstk/kernel_xiaomi_sm8635-modules.git kernel/xiaomi/sm8635-modules
@@ -64,7 +64,7 @@ croot
 rm -rf packages/apps/ViPER4AndroidFX
 git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX
 
-rm -rf packages/apps/AxionFX
+rm -rf packages/apps/AxionFx
 git clone https://github.com/AxionAOSP/android_packages_apps_AxionFx.git packages/apps/AxionFx
 
 rm -rf external/steam-audio
@@ -91,6 +91,11 @@ croot
 cd system/media
 git fetch https://github.com/AxionAOSP/android_system_media.git lineage-23.2
 git cherry-pick 2d58bc4b728d3d8fa6f72256220447c7f99d1b4b
+croot
+
+cd packages/apps/Launcher3
+git fetch https://github.com/Lunaris-AOSP/packages_apps_Launcher3 test
+git reset --hard FETCH_HEAD
 croot
 
 rm -rf vendor/evolution-priv
