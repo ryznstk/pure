@@ -50,13 +50,28 @@ git clone https://github.com/ryznstk/packages_apps_KProfiles.git packages/apps/K
 
 rm -rf packages/apps/XiaomiParts
 
+cd frameworks/base
+git fetch https://github.com/ryznstk/frameworks_base 16.2
+git reset --hard FETCH_HEAD
+croot
+
+cd packages/apps/Singularity
+git fetch https://github.com/Lunaris-AOSP/packages_apps_Singularity test
+git reset --hard FETCH_HEAD
+croot
+
 cd packages/apps/Settings
 git fetch https://github.com/ryznstk/packages_apps_Settings 16.2
 git reset --hard FETCH_HEAD
 croot
 
 cd system/sepolicy
-git fetch https://github.com/ryznstk/lunaris_system_sepolicy.git test
+git fetch https://github.com/ryznstk/lunaris_system_sepolicy test
+git reset --hard FETCH_HEAD
+croot
+
+cd vendor/lineage
+git fetch https://github.com/Lunaris-AOSP/vendor_lineage test
 git reset --hard FETCH_HEAD
 croot
 
