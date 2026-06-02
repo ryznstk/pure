@@ -54,6 +54,9 @@ rm -rf packages/apps/XiaomiParts
 rm -rf packages/apps/ViPER4AndroidFX
 git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX
 
+rm -rf packages/apps/TouchServices
+git clone https://github.com/kenway214/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
+
 rm -rf vendor/evolution-priv
 
 # Refresh signing keys
