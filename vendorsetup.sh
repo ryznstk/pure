@@ -66,7 +66,7 @@ git reset --hard FETCH_HEAD
 croot
 
 cd system/sepolicy
-git fetch https://github.com/ryznstk/lunaris_system_sepolicy test
+git fetch https://github.com/ryznstk/lunaris_system_sepolicy 16.2
 git reset --hard FETCH_HEAD
 croot
 
