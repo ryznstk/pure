@@ -104,8 +104,8 @@ git reset --hard FETCH_HEAD
 croot
 
 cd system/media
-git fetch https://github.com/AxionAOSP/android_system_media.git lineage-23.2
-git cherry-pick 2d58bc4b728d3d8fa6f72256220447c7f99d1b4b
+git fetch https://github.com/ryznstk/system_media bq2
+git reset --hard FETCH_HEAD
 croot
 
 #cd packages/apps/Launcher3
