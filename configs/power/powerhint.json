@@ -627,6 +627,52 @@
             "Node": "GPUMinFreq",
             "Value": "684000000",
             "Duration": 0
+        },
+        {
+            "PowerHint": "DISPLAY_UPDATE_IMMINENT",
+            "Node": "sysKernelMsmPerformanceParametersCpuMinFreq",
+            "Value": "0:1593600 1:1593600 2:1593600 3:1286400 4:1286400 5:1286400 6:1286400 7:2150400",
+            "Duration": 80
+        },
+        {
+            "PowerHint": "DISPLAY_UPDATE_IMMINENT",
+            "Node": "sysDevicesSystemCpuBusDcvsDdr24091000QcomBwmonDdrMinFreq",
+            "Value": "1555000",
+            "Duration": 80
+        },
+        {
+            "PowerHint": "DISPLAY_UPDATE_IMMINENT",
+            "Node": "GPUMinFreq",
+            "Value": "684000000",
+            "Duration": 80
+        },
+        {
+            "PowerHint": "DEVICE_IDLE",
+            "Node": "sysKernelMsmPerformanceParametersCpuMinFreq",
+            "Value": "0:0 1:0 2:0 3:0 4:0 5:0 6:0 7:0",
+            "Duration": 0
+        },
+        {
+            "PowerHint": "DEVICE_IDLE",
+            "Node": "GPUMinFreq",
+            "Value": "255000000",
+            "Duration": 0
+        }
+    ],
+    "AdpfConfig": [
+        {
+            "Name": "ADPF_CPU_LOAD",
+            "Type": "CPU_LOAD",
+            "Target": "CPU",
+            "Value": 0.5,
+            "Duration": 1000
+        },
+        {
+            "Name": "ADPF_GPU_LOAD",
+            "Type": "GPU_LOAD",
+            "Target": "GPU",
+            "Value": 0.5,
+            "Duration": 1000
         }
     ]
 }
