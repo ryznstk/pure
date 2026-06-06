@@ -3,12 +3,12 @@
 # Vendor (fresh clone)
 echo "Cloning vendor tree..."
 rm -rf vendor/xiaomi/peridot
-git clone https://gitlab.com/blu96/vendor-xiaomi-peridot-yt.git vendor/xiaomi/peridot
+git clone -b lineage-23.2 https://gitlab.com/blu96/vendor-xiaomi-peridot-yt.git vendor/xiaomi/peridot
 
 # Kernel source (fresh clone)
 echo "Cloning kernel source tree..."
 rm -rf kernel/xiaomi/sm8635
-git clone -b los --depth 1 https://gitlab.com/blu96/kernel_xiaomi_sm8635_peridot.git kernel/xiaomi/sm8635
+git clone --depth 1 https://github.com/ryznstk/android_kernel_xiaomi_sm8635.git kernel/xiaomi/sm8635
 
 rm -rf kernel/xiaomi/sm8635-modules
 git clone -b lineage-23.2 --depth 1 https://github.com/LineageOS/android_kernel_xiaomi_sm8635-modules.git kernel/xiaomi/sm8635-modules
@@ -54,6 +54,10 @@ rm -rf packages/apps/XiaomiParts
 rm -rf packages/apps/ViPER4AndroidFX
 git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX
 
+cd system/sepolicy
+git fetch https://github.com/ryznstk/inf_system_sepolicy 16
+git reset --hard FETCH_HEAD
+croot
 
 rm -rf packages/apps/TouchServices
 git clone https://github.com/kenway214/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
