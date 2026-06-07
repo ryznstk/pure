@@ -36,29 +36,12 @@ echo "Cloning Gamebar tree..."
 rm -rf packages/apps/GameBar
 git clone https://github.com/ryznstk/packages_apps_GameBar.git packages/apps/GameBar
 
-# LMO
-echo "fetching LMOfreeroam tree..."
-cd packages/apps/LMOFreeform
-git fetch https://github.com/kenway214/packages_apps_LMOFreeform.git sixteen-qpr2
-git reset --hard FETCH_HEAD
-croot
-
 # KProfiles (fresh clone)
 echo "Cloning KProfiles..."
 rm -rf packages/apps/KProfiles
 git clone https://github.com/ryznstk/packages_apps_KProfiles.git packages/apps/KProfiles
 
 rm -rf packages/apps/XiaomiParts
-
-cd frameworks/base
-git fetch https://github.com/ryznstk/frameworks_base test
-git reset --hard FETCH_HEAD
-croot
-
-cd frameworks/native
-git fetch https://github.com/Lunaris-AOSP/frameworks_native test
-git reset --hard FETCH_HEAD
-croot
 
 cd packages/apps/Settings
 git fetch https://github.com/ryznstk/packages_apps_Settings 16.2
