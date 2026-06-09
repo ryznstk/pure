@@ -5,10 +5,10 @@ echo "Cloning vendor tree..."
 rm -rf vendor/xiaomi/peridot
 git clone -b lineage-23.2 https://gitlab.com/blu96/vendor-xiaomi-peridot-yt.git vendor/xiaomi/peridot
 
-#Kernel source (fresh clone)
-#echo "Cloning kernel source tree..."
-#rm -rf kernel/xiaomi/sm8635
-#git clone -b los --depth 1 https://gitlab.com/blu96/xiaomi_sm8635.git kernel/xiaomi/sm8635
+Kernel source (fresh clone)
+echo "Cloning kernel source tree..."
+rm -rf kernel/xiaomi/sm8635
+git clone -b los --depth 1 https://gitlab.com/blu96/xiaomi_sm8635.git kernel/xiaomi/sm8635
 
 rm -rf kernel/xiaomi/sm8635-modules
 git clone -b lineage-23.2 --depth 1 https://github.com/ryznstk/kernel_xiaomi_sm8635-modules.git kernel/xiaomi/sm8635-modules
@@ -35,13 +35,6 @@ git clone https://github.com/GuidixX/vendor_xiaomi_peridot-miuicamera.git vendor
 echo "Cloning Gamebar tree..."
 rm -rf packages/apps/GameBar
 git clone https://github.com/ryznstk/packages_apps_GameBar.git packages/apps/GameBar
-
-# LMO
-echo "fetching LMOfreeroam tree..."
-cd packages/apps/LMOFreeform
-git fetch https://github.com/kenway214/packages_apps_LMOFreeform.git sixteen-qpr2
-git reset --hard FETCH_HEAD
-croot
 
 # KProfiles (fresh clone)
 echo "Cloning KProfiles..."
