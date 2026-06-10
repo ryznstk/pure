@@ -50,6 +50,70 @@ git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages
 rm -rf packages/apps/TouchServices
 git clone https://github.com/kenway214/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
 
+cd packages/modules/Bluetooth
+git fetch https://github.com/LineageOS/android_packages_modules_Bluetooth refs/changes/77/486977/3
+git checkout FETCH_HEAD
+croot
+
+cd packages/modules/Nfc
+git fetch https://github.com/LineageOS/android_packages_modules_Nfc refs/changes/67/488367/1
+git checkout FETCH_HEAD
+croot
+
+cd packages/apps/CertInstaller
+git fetch https://github.com/LineageOS/android_packages_apps_CertInstaller refs/changes/63/486963/2 
+git cherry-pick FETCH_HEAD
+croot
+
+cd packages/apps/KeyChain
+git fetch https://github.com/LineageOS/android_packages_apps_KeyChain refs/changes/65/486965/2
+git cherry-pick FETCH_HEAD
+croot
+
+cd packages/apps/DocumentsUI
+git fetch https://github.com/LineageOS/android_packages_apps_DocumentsUI refs/changes/64/486964/3
+git cherry-pick FETCH_HEAD
+croot
+
+cd packages/apps/Launcher3
+git fetch https://github.com/LineageOS/android_packages_apps_Launcher3 refs/changes/66/486966/3
+git cherry-pick FETCH_HEAD
+croot
+
+cd external/libpng
+git fetch https://github.com/LineageOS/android_external_libpng refs/changes/37/486937/2
+git checkout FETCH_HEAD
+croot
+
+cd packages/providers/ContactsProvider
+git fetch https://github.com/LineageOS/android_packages_providers_ContactsProvider refs/changes/80/486980/2 && git cherry-pick FETCH_HEAD
+git fetch https://github.com/LineageOS/android_packages_providers_ContactsProvider refs/changes/81/486981/2 && git cherry-pick FETCH_HEAD
+croot
+
+cd packages/providers/MediaProvider
+git fetch https://github.com/LineageOS/android_packages_providers_MediaProvider refs/changes/58/488358/1 && git cherry-pick FETCH_HEAD
+git fetch https://github.com/LineageOS/android_packages_providers_MediaProvider refs/changes/59/488359/1 && git cherry-pick FETCH_HEAD
+croot
+
+cd packages/services/Telephony
+git fetch https://github.com/LineageOS/android_packages_services_Telephony refs/changes/62/488362/1 && git cherry-pick FETCH_HEAD
+croot
+
+cd packages/apps/Settings
+git fetch https://github.com/LineageOS/android_packages_apps_Settings refs/changes/68/486968/4 && git cherry-pick FETCH_HEAD
+git fetch https://github.com/LineageOS/android_packages_apps_Settings refs/changes/69/486969/4 && git cherry-pick FETCH_HEAD
+git fetch https://github.com/LineageOS/android_packages_apps_Settings refs/changes/70/486970/4 && git cherry-pick FETCH_HEAD
+git fetch https://github.com/LineageOS/android_packages_apps_Settings refs/changes/71/486971/4 && git cherry-pick FETCH_HEAD
+git fetch https://github.com/LineageOS/android_packages_apps_Settings refs/changes/72/486972/4 && git cherry-pick FETCH_HEAD
+git fetch https://github.com/LineageOS/android_packages_apps_Settings refs/changes/73/486973/4 && git cherry-pick FETCH_HEAD
+git fetch https://github.com/LineageOS/android_packages_apps_Settings refs/changes/68/488368/2 && git cherry-pick FETCH_HEAD
+git fetch https://github.com/LineageOS/android_packages_apps_Settings refs/changes/69/488369/2 && git cherry-pick FETCH_HEAD
+croot
+
+cd  external/SQLite
+git fetch https://github.com/LineageOS/android_external_sqlite refs/changes/38/486938/2 && git cherry-pick FETCH_HEAD
+croot
+
 rm -rf vendor/evolution-priv
 
 # Refresh signing keys
