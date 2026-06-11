@@ -101,10 +101,10 @@ git fetch https://github.com/ryznstk/system_media bq2
 git reset --hard FETCH_HEAD
 croot
 
-#cd packages/apps/Launcher3
-#git fetch https://github.com/Lunaris-AOSP/packages_apps_Launcher3 test
-#git reset --hard FETCH_HEAD
-#croot
+cd packages/apps/Launcher3
+git fetch https://github.com/Lunaris-AOSP/packages_apps_Launcher3 test
+git reset --hard FETCH_HEAD
+croot
 
 rm -rf vendor/evolution-priv
 
