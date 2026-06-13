@@ -29,12 +29,12 @@ git clone -b lineage-23.2 https://github.com/ryznstk/hardware_xiaomi_los.git har
 # MiuiCamera device tree (fresh clone)
 echo "Cloning MiuiCamera device tree..."
 rm -rf device/xiaomi/peridot-miuicamera
-git clone https://github.com/GuidixX/device_xiaomi_peridot-miuicamera.git device/xiaomi/peridot-miuicamera
+git clone https://github.com/ryznstk/android_device_xiaomi_peridot-miuicamera.git device/xiaomi/peridot-miuicamera
 
 # MiuiCamera vendor tree (fresh clone)
 echo "Cloning MiuiCamera vendor tree..."
 rm -rf vendor/xiaomi/peridot-miuicamera
-git clone https://github.com/GuidixX/vendor_xiaomi_peridot-miuicamera.git vendor/xiaomi/peridot-miuicamera
+git clone https://gitlab.com/blu96/proprietary_vendor_xiaomi_peridot-miuicamera.git vendor/xiaomi/peridot-miuicamera
 
 # Gamebar
 echo "Cloning Gamebar tree..."
