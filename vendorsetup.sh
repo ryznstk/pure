@@ -29,7 +29,7 @@ git clone https://github.com/PixelOS-Devices/android_device_xiaomi_peridot-miuic
 # MiuiCamera vendor tree (fresh clone)
 echo "Cloning MiuiCamera vendor tree..."
 rm -rf vendor/xiaomi/peridot-miuicamera
-git clone https://gitlab.com/NoPrincessHere/proprietary_vendor_xiaomi_peridot-miuicamera.git vendor/xiaomi/peridot-miuicamera
+git clone https://gitlab.com/blu96/proprietary_vendor_xiaomi_peridot-miuicamera.git vendor/xiaomi/peridot-miuicamera
 
 # Gamebar
 echo "Cloning Gamebar tree..."
