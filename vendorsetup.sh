@@ -16,6 +16,11 @@ git clone -b lineage-23.2 --depth 1 https://github.com/LineageOS/android_kernel_
 rm -rf kernel/xiaomi/sm8635-devicetrees
 git clone -b lineage-23.2 --depth 1 https://github.com/LineageOS/android_kernel_xiaomi_sm8635-devicetrees.git kernel/xiaomi/sm8635-devicetrees
 
+cd kernel/xiaomi/sm8635
+git fetch https://github.com/SleepForge/kernel_xiaomi_sm8635 lineage-23.2
+git cherry-pick 193c5df1ddacc3fdf14bba4b68e9f915846ca322
+croot
+
 # Hardware xiaomi (fresh clone)
 echo "Cloning hardware xiaomi source..."
 rm -rf hardware/xiaomi
