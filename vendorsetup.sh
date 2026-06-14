@@ -24,12 +24,12 @@ git clone -b lineage-23.2 https://github.com/ryznstk/hardware_xiaomi_los.git har
 # MiuiCamera device tree (fresh clone)
 echo "Cloning MiuiCamera device tree..."
 rm -rf device/xiaomi/peridot-miuicamera
-git clone https://github.com/GuidixX/device_xiaomi_peridot-miuicamera.git device/xiaomi/peridot-miuicamera
+git clone https://github.com/ryznstk/android_device_xiaomi_peridot-miuicamera.git device/xiaomi/peridot-miuicamera
 
 # MiuiCamera vendor tree (fresh clone)
 echo "Cloning MiuiCamera vendor tree..."
 rm -rf vendor/xiaomi/peridot-miuicamera
-git clone https://github.com/GuidixX/vendor_xiaomi_peridot-miuicamera.git vendor/xiaomi/peridot-miuicamera
+git clone https://gitlab.com/blu96/proprietary_vendor_xiaomi_peridot-miuicamera.git vendor/xiaomi/peridot-miuicamera
 
 # Gamebar
 echo "Cloning Gamebar tree..."
@@ -49,6 +49,11 @@ git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages
 
 rm -rf packages/apps/TouchServices
 git clone https://github.com/kenway214/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
+
+cd frameworks/base
+git fetch https://github.com/ryznstk/android_frameworks_base lineage-23.2
+git reset --hard FETCH_HEAD
+croot
 
 cd packages/modules/Bluetooth
 git fetch https://github.com/LineageOS/android_packages_modules_Bluetooth refs/changes/77/486977/3
