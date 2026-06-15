@@ -44,14 +44,14 @@ git clone https://github.com/ryznstk/packages_apps_KProfiles.git packages/apps/K
 rm -rf packages/apps/XiaomiParts
 
 cd packages/apps/Settings
-git fetch https://github.com/ryznstk/packages_apps_Settings 16.2
+git fetch https://github.com/ryznstk/packages_apps_Settings test
 git reset --hard FETCH_HEAD
 croot
 
-cd system/sepolicy
-git fetch https://github.com/ryznstk/lunaris_system_sepolicy 16.2
-git reset --hard FETCH_HEAD
-croot
+#cd system/sepolicy
+#git fetch https://github.com/ryznstk/lunaris_system_sepolicy 16.2
+#git reset --hard FETCH_HEAD
+#croot
 
 #cd vendor/lineage
 #git fetch https://github.com/Lunaris-AOSP/vendor_lineage test
@@ -82,17 +82,12 @@ git reset --hard FETCH_HEAD
 croot
 
 cd frameworks/av
-git fetch https://github.com/ryznstk/frameworks_av 16.2
-git reset --hard FETCH_HEAD
+git fetch https://github.com/AxionAOSP/android_frameworks_av lineage-23.2
+git cherry-pick 463cdb4267ceece8c7b630cb0339ea26e985075c
 croot
 
 cd system/media
 git fetch https://github.com/ryznstk/system_media bq2
-git reset --hard FETCH_HEAD
-croot
-
-cd packages/apps/Launcher3
-git fetch https://github.com/Lunaris-AOSP/packages_apps_Launcher3 test
 git reset --hard FETCH_HEAD
 croot
 
