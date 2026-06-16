@@ -49,14 +49,14 @@ git clone https://github.com/ryznstk/packages_apps_GameBar.git packages/apps/Gam
 rm -rf packages/apps/XiaomiParts
 
 cd packages/apps/Settings
-git fetch https://github.com/ryznstk/packages_apps_Settings 16.2
+git fetch https://github.com/ryznstk/packages_apps_Settings test
 git reset --hard FETCH_HEAD
 croot
 
-cd system/sepolicy
-git fetch https://github.com/ryznstk/lunaris_system_sepolicy 16.2
-git reset --hard FETCH_HEAD
-croot
+#cd system/sepolicy
+#git fetch https://github.com/ryznstk/lunaris_system_sepolicy 16.2
+#git reset --hard FETCH_HEAD
+#croot
 
 # ViperFX
 rm -rf packages/apps/ViPER4AndroidFX
