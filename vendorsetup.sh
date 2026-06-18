@@ -8,13 +8,17 @@ git clone -b lineage-23.2 https://gitlab.com/blu96/vendor-xiaomi-peridot-yt.git 
 # Kernel source (fresh clone)
 echo "Cloning kernel source tree..."
 rm -rf kernel/xiaomi/sm8635
-git clone -b los --depth 1 https://gitlab.com/blu96/xiaomi_sm8635.git kernel/xiaomi/sm8635
+git clone -b resuki --depth 1 https://gitlab.com/blu96/xiaomi_sm8635.git kernel/xiaomi/sm8635
 
 rm -rf kernel/xiaomi/sm8635-modules
 git clone -b lineage-23.2 --depth 1 https://github.com/ryznstk/kernel_xiaomi_sm8635-modules.git kernel/xiaomi/sm8635-modules
 
 rm -rf kernel/xiaomi/sm8635-devicetrees
 git clone -b lineage-23.2 --depth 1 https://github.com/ryznstk/kernel_xiaomi_sm8635-devicetrees.git kernel/xiaomi/sm8635-devicetrees
+
+cd kernel/xiaomi/sm8635
+curl -LSs "https://raw.githubusercontent.com/ReSukiSU/ReSukiSU/main/kernel/setup.sh" | bash
+croot
 
 # Hardware xiaomi (fresh clone)
 echo "Cloning hardware xiaomi source..."
@@ -117,6 +121,11 @@ croot
 
 cd  external/SQLite
 git fetch https://github.com/LineageOS/android_external_sqlite refs/changes/38/486938/2 && git cherry-pick FETCH_HEAD
+croot
+
+cd frameworks/base
+git fetch https://github.com/ryznstk/android_frameworks_base lineage-23.2
+git reset --hard FETCH_HEAD
 croot
 
 rm -rf vendor/evolution-priv
