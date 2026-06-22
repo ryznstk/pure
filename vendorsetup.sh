@@ -43,11 +43,6 @@ git fetch https://github.com/kenway214/packages_apps_LMOFreeform.git sixteen-qpr
 git reset --hard FETCH_HEAD
 croot
 
-# KProfiles (fresh clone)
-echo "Cloning KProfiles..."
-rm -rf packages/apps/KProfiles
-git clone https://github.com/ryznstk/packages_apps_KProfiles.git packages/apps/KProfiles
-
 rm -rf packages/apps/XiaomiParts
 
 # ViperFX
