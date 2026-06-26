@@ -42,8 +42,8 @@ git clone https://github.com/ryznstk/packages_apps_GameBar.git packages/apps/Gam
 
 # KProfiles (fresh clone)
 echo "Cloning KProfiles..."
-#rm -rf packages/apps/KProfiles
-#git clone https://github.com/ryznstk/packages_apps_KProfiles.git packages/apps/KProfiles
+rm -rf packages/apps/KProfiles
+git clone https://github.com/ryznstk/packages_apps_KProfiles.git packages/apps/KProfiles
 
 rm -rf packages/apps/XiaomiParts
 
