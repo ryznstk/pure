@@ -33,7 +33,7 @@ $(call inherit-product, packages/apps/TouchServices/touchservice.mk)
 $(call inherit-product, packages/apps/GameBar/gamebar.mk) 
 
 # Lineage-Priv
--include vendor/evolution-priv/keys/keys.mk
+-include vendor/lineage-priv/keys/keys.mk
 
 # Call the MiuiCamera setup
 $(call inherit-product-if-exists, device/xiaomi/peridot-miuicamera/device.mk)
