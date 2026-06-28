@@ -7,7 +7,7 @@ git clone -b los https://gitlab.com/blu96/vendor-xiaomi-peridot-yt.git vendor/xi
 
 # Kernel source (fresh clone)
 echo "Cloning kernel source tree..."
-rm -rf kernel/xiaomi/sm8635
+#rm -rf kernel/xiaomi/sm8635
 git clone -b resuki --depth 1 https://gitlab.com/blu96/xiaomi_sm8635.git kernel/xiaomi/sm8635
 
 rm -rf kernel/xiaomi/sm8635-modules
