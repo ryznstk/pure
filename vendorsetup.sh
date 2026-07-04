@@ -44,7 +44,7 @@ git clone https://github.com/ryznstk/packages_apps_GameBar.git packages/apps/Gam
 rm -rf packages/apps/XiaomiParts
 
 cd packages/apps/Settings
-git fetch https://github.com/ryznstk/packages_apps_Settings test
+git fetch https://github.com/ryznstk/packages_apps_Settings 16.2
 git reset --hard FETCH_HEAD
 croot
 
