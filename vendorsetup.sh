@@ -58,7 +58,7 @@ rm -rf packages/apps/XiaomiParts
 #croot
 
 cd packages/apps/Settings
-git fetch https://github.com/ryznstk/packages_apps_Settings test
+git fetch https://github.com/ryznstk/packages_apps_Settings 16.2
 git reset --hard FETCH_HEAD
 croot
 
@@ -106,7 +106,7 @@ git reset --hard FETCH_HEAD
 croot
 
 cd packages/apps/Launcher3
-git fetch https://github.com/Lunaris-AOSP/packages_apps_Launcher3 test
+git fetch https://github.com/Lunaris-AOSP/packages_apps_Launcher3 16.2
 git reset --hard FETCH_HEAD
 croot
 
