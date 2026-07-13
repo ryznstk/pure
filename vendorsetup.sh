@@ -47,18 +47,18 @@ git clone https://github.com/ryznstk/packages_apps_KProfiles.git packages/apps/K
 
 rm -rf packages/apps/XiaomiParts
 
-#cd frameworks/base
-#git fetch https://github.com/Lunaris-AOSP/frameworks_base 16.2
-#git reset --hard FETCH_HEAD
-#croot
+cd frameworks/base
+git fetch https://github.com/Lunaris-AOSP/frameworks_base test
+git reset --hard FETCH_HEAD
+croot
 
-#cd packages/apps/Singularity
-#git fetch https://github.com/ryznstk/packages_apps_Singularity test
-#git reset --hard FETCH_HEAD
-#croot
+cd packages/apps/Singularity
+git fetch https://github.com/ryznstk/packages_apps_Singularity test
+git reset --hard FETCH_HEAD
+croot
 
 cd packages/apps/Settings
-git fetch https://github.com/ryznstk/packages_apps_Settings 16.2
+git fetch https://github.com/ryznstk/packages_apps_Settings test
 git reset --hard FETCH_HEAD
 croot
 
@@ -105,12 +105,13 @@ git fetch https://github.com/ryznstk/system_media bq2
 git reset --hard FETCH_HEAD
 croot
 
-cd packages/apps/Launcher3
-git fetch https://github.com/Lunaris-AOSP/packages_apps_Launcher3 16.2
-git reset --hard FETCH_HEAD
-croot
+#cd packages/apps/Launcher3
+#git fetch https://github.com/Lunaris-AOSP/packages_apps_Launcher3 16.2
+#git reset --hard FETCH_HEAD
+#croot
 
 rm -rf vendor/evolution-priv
+rm -rf vendor/voltage-priv
 
 # Refresh signing keys
 if [ -d vendor/lineage-priv/keys ]; then
