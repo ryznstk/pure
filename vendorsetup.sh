@@ -54,6 +54,10 @@ git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages
 rm -rf packages/apps/TouchServices
 git clone https://github.com/ryznstk/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
 
+rm -rf packages/overlays
+rm -rf hardware/qcom-caf/msm8996
+rm -rf hardware/qcom-caf/msm8998
+
 # Refresh signing keys
 if [ -d vendor/evolution-priv/keys ]; then
   echo "Removing existing signing keys..."
