@@ -57,6 +57,7 @@ git clone https://github.com/ryznstk/packages_apps_TouchServices.git -b lineage-
 rm -rf packages/overlays
 rm -rf hardware/qcom-caf/msm8996
 rm -rf hardware/qcom-caf/msm8998
+rm -rf packages/apps/ParanoidSense
 
 # Refresh signing keys
 if [ -d vendor/evolution-priv/keys ]; then
