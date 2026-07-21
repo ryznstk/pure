@@ -59,6 +59,7 @@ rm -rf hardware/qcom-caf/msm8996
 rm -rf hardware/qcom-caf/msm8998
 rm -rf packages/apps/ParanoidSense
 rm -rf packages/apps/Calendar
+rm -rf external/coreboot
 
 # Refresh signing keys
 if [ -d vendor/evolution-priv/keys ]; then
