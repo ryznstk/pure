@@ -47,11 +47,6 @@ git clone https://github.com/ryznstk/packages_apps_KProfiles.git packages/apps/K
 
 rm -rf packages/apps/XiaomiParts
 
-cd vendor/products
-git fetch https://github.com/ryznstk/platform_vendor_products 17
-git reset --hard FETCH_HEAD
-croot
-
 # ViperFX
 rm -rf packages/apps/ViPER4AndroidFX
 git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX
@@ -59,13 +54,15 @@ git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages
 rm -rf packages/apps/TouchServices
 git clone https://github.com/ryznstk/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
 
+rm-rf vendor/lineage-priv
+
 # Refresh signing keys
-if [ -d vendor/lineage-priv/keys ]; then
+if [ -d vendor/evolution-priv/keys ]; then
   echo "Removing existing signing keys..."
-  rm -rf vendor/lineage-priv/keys
+  rm -rf vendor/evolution-priv/keys
 fi
 echo "Cloningfresh signing keys..."
-git clone https://github.com/ryznstk/keys.git vendor/lineage-priv/keys
+git clone https://github.com/ryznstk/keys.git vendor/evolution-priv/keys
 
 # Always back to root at the end
 if command -v croot &>/dev/null; then
