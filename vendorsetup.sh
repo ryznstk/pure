@@ -54,6 +54,8 @@ git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages
 rm -rf packages/apps/TouchServices
 git clone https://github.com/ryznstk/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
 
+git clone -b resuki --depth 1 https://gitlab.com/blu96/xiaomi_sm8635.git kernel/xiaomi/sm8635
+
 #cd vendor/products
 #git fetch https://github.com/ryznstk/platform_vendor_products 17
 #git reset --hard FETCH_HEAD
