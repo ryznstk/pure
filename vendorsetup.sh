@@ -51,6 +51,7 @@ rm -rf packages/apps/TouchServices
 git clone https://github.com/ryznstk/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
 
 rm -rf packages/apps/AxionFx
+rm -rf external/steam-audio
 rm -rf vendor/lineage-priv
 
 # Refresh signing keys
