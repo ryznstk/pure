@@ -16,9 +16,9 @@ git clone -b lineage-23.2 --depth 1 https://github.com/ryznstk/kernel_xiaomi_sm8
 rm -rf kernel/xiaomi/sm8635-devicetrees
 git clone -b lineage-23.2 --depth 1 https://github.com/ryznstk/kernel_xiaomi_sm8635-devicetrees.git kernel/xiaomi/sm8635-devicetrees
 
-cd kernel/xiaomi/sm8635
-curl -LSs "https://raw.githubusercontent.com/ReSukiSU/ReSukiSU/main/kernel/setup.sh" | bash
-croot
+#cd kernel/xiaomi/sm8635
+#curl -LSs "https://raw.githubusercontent.com/ReSukiSU/ReSukiSU/main/kernel/setup.sh" | bash
+#croot
 
 # Hardware xiaomi (fresh clone)
 echo "Cloning hardware xiaomi source..."
