@@ -52,14 +52,6 @@ git clone https://github.com/ryznstk/packages_apps_TouchServices.git -b lineage-
 
 rm -rf vendor/lineage-priv/keys
 
-# Refresh signing keys
-if [ -d vendor/voltage-priv/keys ]; then
-  echo "Removing existing signing keys..."
-  rm -rf vendor/voltage-priv/keys
-fi
-echo "Cloning fresh signing keys..."
-git clone https://github.com/droidcore/private_key.git -b main vendor/voltage-priv/keys
-
 # Always back to root at the end
 if command -v croot &>/dev/null; then
   croot
