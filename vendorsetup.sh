@@ -38,8 +38,8 @@ git clone https://github.com/ryznstk/packages_apps_GameBar.git packages/apps/Gam
 
 # KProfiles (fresh clone)
 echo "Cloning KProfiles..."
-#rm -rf packages/apps/KProfiles
-#git clone https://github.com/ryznstk/packages_apps_KProfiles.git packages/apps/KProfiles
+rm -rf packages/apps/KProfiles
+git clone https://github.com/ryznstk/packages_apps_KProfiles.git packages/apps/KProfiles
 
 rm -rf packages/apps/XiaomiParts
 
@@ -47,30 +47,8 @@ rm -rf packages/apps/XiaomiParts
 rm -rf packages/apps/ViPER4AndroidFX
 git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX
 
-
-rm -rf packages/apps/AxionFx
-git clone https://github.com/AxionAOSP/android_packages_apps_AxionFx.git packages/apps/AxionFx
-
-rm -rf external/steam-audio
-git clone -b lineage-23.2 https://github.com/AxionAOSP/android_external_steam-audio.git external/steam-audio
-
 rm -rf packages/apps/TouchServices
 git clone https://github.com/kenway214/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
-
-cd external/pffft
-git fetch https://github.com/AxionAOSP/android_external_pffft lineage-23.2
-git reset --hard FETCH_HEAD
-croot
-
-cd frameworks/av
-git fetch https://github.com/AxionAOSP/android_frameworks_av lineage-23.2
-git cherry-pick 463cdb4267ceece8c7b630cb0339ea26e985075c
-croot
-
-cd system/media
-git fetch https://github.com/ryznstk/system_media bq2
-git reset --hard FETCH_HEAD
-croot
 
 rm -rf vendor/lineage-priv/keys
 
