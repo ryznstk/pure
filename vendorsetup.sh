@@ -37,6 +37,7 @@ rm -rf packages/apps/GameBar
 git clone https://github.com/ryznstk/packages_apps_GameBar.git packages/apps/GameBar
 
 rm -rf packages/apps/XiaomiParts
+rm -rf packages/apps/KProfiles
 
 # ViperFX
 rm -rf packages/apps/ViPER4AndroidFX
