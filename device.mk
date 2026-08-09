@@ -32,9 +32,6 @@ $(call inherit-product, packages/apps/TouchServices/touchservice.mk)
 # GameBar Performance Overlay
 $(call inherit-product, packages/apps/GameBar/gamebar.mk) 
 
-# AxionFX
-$(call inherit-product, packages/apps/AxionFx/config.mk)
-
 # Lineage-Priv
 -include vendor/lineage-priv/keys/keys.mk
 
@@ -385,8 +382,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom-caf/common/libqti-perfd-client \
     hardware/xiaomi \
     vendor/qcom/opensource/usb/etc \
-    hardware/lineage/compat \
-    packages/apps/AxionFx
+    hardware/lineage/compat 
 
 # Sensors
 PRODUCT_PACKAGES += \
