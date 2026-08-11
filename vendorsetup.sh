@@ -7,8 +7,8 @@ git clone -b CP2A https://github.com/ryznstk/proprietary_vendor_xiaomi_peridot.g
 
 # Kernel source (fresh clone)
 echo "Cloning kernel source tree..."
-rm -rf kernel/xiaomi/sm8635
-git clone -b resuki --depth 1 https://gitlab.com/blu96/xiaomi_sm8635.git kernel/xiaomi/sm8635
+#rm -rf kernel/xiaomi/sm8635
+#git clone -b resuki --depth 1 https://gitlab.com/blu96/xiaomi_sm8635.git kernel/xiaomi/sm8635
 
 rm -rf kernel/xiaomi/sm8635-modules
 git clone -b lineage-23.2 --depth 1 https://github.com/ryznstk/kernel_xiaomi_sm8635-modules.git kernel/xiaomi/sm8635-modules
@@ -16,9 +16,9 @@ git clone -b lineage-23.2 --depth 1 https://github.com/ryznstk/kernel_xiaomi_sm8
 rm -rf kernel/xiaomi/sm8635-devicetrees
 git clone -b lineage-23.2 --depth 1 https://github.com/ryznstk/kernel_xiaomi_sm8635-devicetrees.git kernel/xiaomi/sm8635-devicetrees
 
-cd kernel/xiaomi/sm8635
-curl -LSs "https://raw.githubusercontent.com/ReSukiSU/ReSukiSU/main/kernel/setup.sh" | bash
-croot
+#cd kernel/xiaomi/sm8635
+#curl -LSs "https://raw.githubusercontent.com/ReSukiSU/ReSukiSU/main/kernel/setup.sh" | bash
+#croot
 
 # Hardware xiaomi (fresh clone)
 echo "Cloning hardware xiaomi source..."
@@ -59,7 +59,7 @@ git fetch https://github.com/CipherOS/android_vendor_cipher seventeen
 git cherry-pick a139ef86c1d00470092b3160e204dd247416eec5
 croot
 
-git clone -b resuki --depth 1 https://gitlab.com/blu96/xiaomi_sm8635.git kernel/xiaomi/sm8635
+#git clone -b resuki --depth 1 https://gitlab.com/blu96/xiaomi_sm8635.git kernel/xiaomi/sm8635
 
 rm -rf vendor/lineage-priv
 
