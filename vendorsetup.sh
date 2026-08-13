@@ -54,10 +54,10 @@ git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages
 rm -rf packages/apps/TouchServices
 git clone https://github.com/ryznstk/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
 
-cd vendor/lineage
-git fetch https://github.com/CipherOS/android_vendor_cipher seventeen
-git cherry-pick a139ef86c1d00470092b3160e204dd247416eec5
-croot
+#cd vendor/lineage
+#git fetch https://github.com/CipherOS/android_vendor_cipher seventeen
+#git cherry-pick a139ef86c1d00470092b3160e204dd247416eec5
+#croot
 
 rm -rf vendor/lineage-priv
 
