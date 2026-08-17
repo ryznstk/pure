@@ -57,8 +57,29 @@ croot
 rm -rf packages/apps/ViPER4AndroidFX
 git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX
 
+rm -rf packages/apps/AxionFx
+git clone https://github.com/AxionAOSP/android_packages_apps_AxionFx.git packages/apps/AxionFx
+
+rm -rf external/steam-audio
+git clone -b lineage-23.2 https://github.com/AxionAOSP/android_external_steam-audio.git external/steam-audio
+
 rm -rf packages/apps/TouchServices
 git clone https://github.com/kenway214/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
+
+cd external/pffft
+git fetch https://github.com/AxionAOSP/android_external_pffft lineage-23.2
+git reset --hard FETCH_HEAD
+croot
+
+cd frameworks/av
+git fetch https://github.com/ryznstk/frameworks_av 16.2
+git reset --hard FETCH_HEAD
+croot
+
+cd system/media
+git fetch https://github.com/AxionAOSP/android_system_media.git lineage-23.2
+git cherry-pick 2d58bc4b728d3d8fa6f72256220447c7f99d1b4b
+croot
 
 rm -rf vendor/evolution-priv
 
