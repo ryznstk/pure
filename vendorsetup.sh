@@ -61,14 +61,6 @@ git clone https://github.com/ryznstk/packages_apps_TouchServices.git -b lineage-
 
 rm -rf vendor/lineage-priv
 
-# Refresh signing keys
-if [ -d vendor/evolution-priv/keys ]; then
-  echo "Removing existing signing keys..."
-  rm -rf vendor/evolution-priv/keys
-fi
-echo "Cloningfresh signing keys..."
-git clone https://github.com/ryznstk/keys.git vendor/evolution-priv/keys
-
 # Always back to root at the end
 if command -v croot &>/dev/null; then
   croot
