@@ -41,6 +41,8 @@ $(call inherit-product-if-exists, device/xiaomi/peridot-miuicamera/device.mk)
 # Viper4AndroidFX
 $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
+$(call inherit-product, packages/apps/AxionFx/config.mk)
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -376,7 +378,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom-caf/common/libqti-perfd-client \
     hardware/xiaomi \
     vendor/qcom/opensource/usb/etc \
-    hardware/lineage/compat 
+    hardware/lineage/compat \
+    packages/apps/AxionFx
 
 # Sensors
 PRODUCT_PACKAGES += \
