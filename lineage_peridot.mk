@@ -34,6 +34,26 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_ENABLE_BLUR := true
 SURFACE_FLINGER_BOOST := true
 
+Add the following variables:
+
+# Lunch banner maintainer variable
+RISING_MAINTAINER="BLU"
+
+# Chipset/Maintainer properties (ro.rising.chipset/ro.rising.maintainer) 
+# Set RISING_MAINTAINER for version control 
+# (Optional if builder is setting properties via init_<device>.cpp)
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RisingChipset="Snapdragon 8s Gen 3" \
+    RisingMaintainer="BLU"
+
+RISING_MAINTAINER := BLU
+
+# Disable/enable blur support, false by default
+TARGET_ENABLE_BLUR := true
+
+# Whether to ship aperture camera, false by default
+PRODUCT_NO_CAMERA := true
+
 PRODUCT_SYSTEM_NAME := peridot_global
 PRODUCT_SYSTEM_DEVICE := peridot
 
