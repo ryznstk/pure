@@ -34,8 +34,6 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_ENABLE_BLUR := true
 SURFACE_FLINGER_BOOST := true
 
-Add the following variables:
-
 # Lunch banner maintainer variable
 RISING_MAINTAINER="BLU"
 
