@@ -1,3 +1,12 @@
+ro.mist.display=1220 x 2712, 120 hz
+ro.mist.battery=5000mah
+ro.mist.soc=Snapdragon® 8S Gen 3
+ro.mist.camera=50MP + 8MP 
+ro.mist.front=20MP
+ro.mist.platform=SM8635
+ro.mist.screen=6.67' CrystalRes Flow AMOLED
+ro.mist.device.name=Poco F6
+
 # Camera
 persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,org.lineageos.aperture
 ro.com.google.lens.oem_camera_package=com.android.camera
