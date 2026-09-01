@@ -9,12 +9,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/alpha/config/common_full_phone.mk)
 
 # Inherit from peridot device
 $(call inherit-product, device/xiaomi/peridot/device.mk)
 
-PRODUCT_NAME := lineage_peridot
+PRODUCT_NAME := alpha_peridot
 PRODUCT_DEVICE := peridot
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
@@ -33,20 +33,31 @@ TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_ENABLE_BLUR := true
 SURFACE_FLINGER_BOOST := true
-TARGET_INCLUDE_AXFX := true
-TARGET_INCLUDES_LOS_PREBUILTS := false
-PERF_GOV_SUPPORTED := true
-PERF_DEFAULT_GOV := hyperblu
-TARGET_NEEDS_DOZE_FIX := true
-TARGET_DOZE_TAP_PULSE_SUPPORTED := true
-TARGET_DOZE_DOUBLE_TAP_PULSE_SUPPORTED := true
-TARGET_DOZE_PICKUP_PULSE_SUPPORTED := true
-TARGET_DOZE_SIDE_FPS_PULSE_SUPPORTED := true
 
-AXION_CAMERA_REAR_INFO := 50,8
-AXION_CAMERA_FRONT_INFO := 20
-AXION_MAINTAINER := BLU
-AXION_PROCESSOR := Snapdragon_8s_Gen_3
+ALPHA_VERSION_APPEND_TIME_OF_DAY := false
+
+# TARGET_BUILD_PACKAGE options:
+TARGET_BUILD_PACKAGE := 3
+
+# (valid only for GAPPS builds)
+TARGET_INCLUDE_GOOGLE_COMMS := true
+TARGET_INCLUDE_PIXEL_LAUNCHER := false
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_SUPPORTS_CALL_RECORDING := true
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+
+# Debugging
+TARGET_INCLUDE_MATLOG := false
+WITH_ADB_INSECURE := false
+
+# Extras
+TARGET_INCLUDE_SIMPLE_TUNE := true
+
+# Maintainer
+ALPHA_BUILD_TYPE := Unoficial
+ALPHA_MAINTAINER := BLU
 
 PRODUCT_SYSTEM_NAME := peridot_global
 PRODUCT_SYSTEM_DEVICE := peridot
