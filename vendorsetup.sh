@@ -54,11 +54,6 @@ git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages
 rm -rf packages/apps/TouchServices
 git clone https://github.com/kenway214/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
 
-cd device/axion/common
-git fetch https://github.com/ryznstk/android_device_axion_common lineage-23.2
-git reset --hard FETCH_HEAD
-croot
-
 rm -rf vendor/evolution-priv
 
 # Refresh signing keys
