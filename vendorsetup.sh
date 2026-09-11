@@ -19,7 +19,7 @@ git clone -b lineage-23.2 --depth 1 https://github.com/LineageOS/android_kernel_
 # Hardware xiaomi (fresh clone)
 echo "Cloning hardware xiaomi source..."
 rm -rf hardware/xiaomi
-git clone -b lineage-24.0 https://github.com/ryznstk/hardware_xiaomi_los.git hardware/xiaomi
+git clone -b los https://github.com/ryznstk/hardware_xiaomi_los.git hardware/xiaomi
 
 # MiuiCamera device tree (fresh clone)
 echo "Cloning MiuiCamera device tree..."
