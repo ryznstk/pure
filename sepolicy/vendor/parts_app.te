@@ -51,3 +51,6 @@ binder_call(parts_app, vendor_hal_displayfeature_xiaomi_default)
 # Thermal
 allow parts_app sysfs_thermal:dir r_dir_perms;
 allow parts_app sysfs_thermal:file rw_file_perms;
+
+
+allow system_app proc_filesystems:file read;
