@@ -19,12 +19,12 @@ git clone -b lineage-23.2 --depth 1 https://github.com/LineageOS/android_kernel_
 # Hardware xiaomi (fresh clone)
 echo "Cloning hardware xiaomi source..."
 rm -rf hardware/xiaomi
-git clone -b lineage-23.2 https://github.com/ryznstk/hardware_xiaomi_los.git hardware/xiaomi
+git clone -b los https://github.com/ryznstk/hardware_xiaomi_los.git hardware/xiaomi
 
 # MiuiCamera device tree (fresh clone)
 echo "Cloning MiuiCamera device tree..."
 rm -rf device/xiaomi/peridot-miuicamera
-git clone -b 17 https://github.com/ryznstk/android_device_xiaomi_peridot-miuicamera.git device/xiaomi/peridot-miuicamera
+git clone https://github.com/ryznstk/android_device_xiaomi_peridot-miuicamera.git device/xiaomi/peridot-miuicamera
 
 # MiuiCamera vendor tree (fresh clone)
 echo "Cloning MiuiCamera vendor tree..."
@@ -38,6 +38,9 @@ git clone https://github.com/ryznstk/packages_apps_GameBar.git packages/apps/Gam
 
 rm -rf packages/apps/XiaomiParts
 rm -rf packages/apps/KProfiles
+
+rm -rf packages/apps/NotGameTurbo
+git clone https://github.com/ryznstk/android_packages_apps_NotGameTurbo.git packages/apps/NotGameTurbo
 
 # ViperFX
 rm -rf packages/apps/ViPER4AndroidFX
