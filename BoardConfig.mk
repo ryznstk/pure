@@ -284,3 +284,6 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 # Vendor
 include vendor/xiaomi/peridot/BoardConfigVendor.mk
 SELINUX_IGNORE_NEVERALLOWS := true
+
+# NotGameTurbo
+include packages/apps/NotGameTurbo/BoardConfig.mk
