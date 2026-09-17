@@ -32,6 +32,9 @@ $(call inherit-product, packages/apps/TouchServices/touchservice.mk)
 # GameBar Performance Overlay
 $(call inherit-product, packages/apps/GameBar/gamebar.mk) 
 
+# NotGameTurbo
+$(call inherit-product, packages/apps/NotGameTurbo/notgameturbo.mk)
+
 # Lineage-Priv
 -include vendor/lineage-priv/keys/keys.mk
 
